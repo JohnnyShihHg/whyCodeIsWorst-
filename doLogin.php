@@ -1,9 +1,8 @@
 <?php
-$account = $_PSOT['account'];
-$password = $_PSOT['password'];
+$account = $_POST['account'];
+$password = $_POST['password'];
 
 $conn = new mysqli("localhost","root","root","test");
-$conn->set_charset("utf8mb4");
 
 $sql = "SELECT * FROM `users` WHERE account = '$account' && password ='$password';";
 //該帳號的表資料取得email
